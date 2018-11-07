@@ -6,8 +6,9 @@ Vue.use(uiv);
 
 var app = new Vue({
    el:"#app",
-   date:{
-
+   data:{
+       time: new Date(),
+       date: null
    },
     methods:{
 

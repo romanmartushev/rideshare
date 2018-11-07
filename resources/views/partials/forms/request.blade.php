@@ -47,11 +47,19 @@ Inputs needed:
         </div>
     </div>
     <div class="row">
-        <div class="form-group col-sm-6 col-sm-4">
-            <label for="pickup_time">Time of Pickup</label>
-            <time-picker v-model="time"/>
-            {{--<date-picker v-model="date"/>--}}
-            <small id="time_help" class="form-text text-muted">Time you need to be picked up</small>
+        <div class="col-sm-6">
+            <div class="form-group col-sm-12">
+                <label for="pickup_time">Time of Pickup</label>
+                <section>
+                    <date-picker v-model="date"/>
+                    <br/>
+                    <alert type="info" v-show="date">You selected <b>@{{date}}</b>.</alert>
+                </section>
+                <small id="time_help" class="form-text text-muted">Time you need to be picked up</small>
+            </div>
+            <div class="col-sm-12">
+                <time-picker v-model="time"/>
+            </div>
         </div>
         <div class="form-group col-sm-6 col-sm-4">
             <label for="duration">Duration of Service</label>
@@ -121,42 +129,6 @@ Inputs needed:
                 {{--@{{success}}--}}
             {{--</div>--}}
         {{--</div>--}}
-    {{--</div>--}}
-    {{--<div class="row" v-if="packages.length > 0" v-for="(package, index) in packages">--}}
-        {{--<div class="col-sm-12 display-4">Package @{{ index }}</div>--}}
-        {{--<div class="col-sm-6">--}}
-            {{--<div class="form-group">--}}
-                {{--<label>Source Address</label>--}}
-                {{--<input type="text" class="form-control" v-model="package.source_address">--}}
-            {{--</div>--}}
-        {{--</div>--}}
-        {{--<div class="col-sm-6">--}}
-            {{--<div class="form-group">--}}
-                {{--<label>Destination Address</label>--}}
-                {{--<input type="text" class="form-control" v-model="package.destination_address">--}}
-            {{--</div>--}}
-        {{--</div>--}}
-        {{--<div class="col-sm-4">--}}
-            {{--<div class="form-group">--}}
-                {{--<label>Cost</label>--}}
-                {{--<input type="text" class="form-control" v-model="package.cost" readonly>--}}
-            {{--</div>--}}
-        {{--</div>--}}
-        {{--<div class="col-sm-4">--}}
-            {{--<div class="form-group">--}}
-                {{--<label>Time order was placed</label>--}}
-                {{--<input type="text" class="form-control" v-model="package.time_order_placed" readonly>--}}
-            {{--</div>--}}
-        {{--</div>--}}
-        {{--<div class="col-sm-4">--}}
-            {{--<div class="form-group">--}}
-                {{--<label>Time order was delivered</label>--}}
-                {{--<input type="text" class="form-control" v-model="package.time_delivered" readonly>--}}
-            {{--</div>--}}
-        {{--</div>--}}
-        {{--<button class="btn btn-dark m-1" @click="update(package)">Update</button>--}}
-        {{--<button class="btn btn-danger m-1" @click="remove(package)">Delete</button>--}}
-        {{--<hr class="divider divider-slash" />--}}
     {{--</div>--}}
 </div>
 <script src="/js/request.js"></script>

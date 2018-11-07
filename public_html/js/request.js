@@ -13114,8 +13114,9 @@ __WEBPACK_IMPORTED_MODULE_0_vue__["a" /* default */].use(__WEBPACK_IMPORTED_MODU
 
 var app = new __WEBPACK_IMPORTED_MODULE_0_vue__["a" /* default */]({
    el:"#app",
-   date:{
-
+   data:{
+       time: new Date(),
+       date: null
    },
     methods:{
 
