@@ -12,5 +12,11 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect("/wordpress");
+});
+Route::get('/welcome', function(){
+   return view('welcome');
+});
+Route::get('/request', function(){
+    return view('partials.forms.request');
 });

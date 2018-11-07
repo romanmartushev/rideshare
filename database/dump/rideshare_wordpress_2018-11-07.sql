@@ -7,7 +7,7 @@
 #
 # Host: 127.0.0.1 (MySQL 5.5.58)
 # Database: rideshare_wordpress
-# Generation Time: 2018-11-07 14:48:39 +0000
+# Generation Time: 2018-11-07 16:43:00 +0000
 # ************************************************************
 
 
@@ -182,7 +182,7 @@ VALUES
 	(1,'siteurl','https://rideshare.localhost/wordpress','yes'),
 	(2,'home','https://rideshare.localhost/wordpress','yes'),
 	(3,'blogname','RideShare','yes'),
-	(4,'blogdescription','Just another WordPress site','yes'),
+	(4,'blogdescription','A Non-Profit RideShare Service','yes'),
 	(5,'users_can_register','0','yes'),
 	(6,'admin_email','martushev8@gmail.com','yes'),
 	(7,'start_of_week','1','yes'),
@@ -257,8 +257,8 @@ VALUES
 	(76,'comment_order','asc','yes'),
 	(77,'sticky_posts','a:0:{}','yes'),
 	(78,'widget_categories','a:2:{i:2;a:4:{s:5:\"title\";s:0:\"\";s:5:\"count\";i:0;s:12:\"hierarchical\";i:0;s:8:\"dropdown\";i:0;}s:12:\"_multiwidget\";i:1;}','yes'),
-	(79,'widget_text','a:0:{}','yes'),
-	(80,'widget_rss','a:0:{}','yes'),
+	(79,'widget_text','a:2:{i:1;a:0:{}s:12:\"_multiwidget\";i:1;}','yes'),
+	(80,'widget_rss','a:2:{i:1;a:0:{}s:12:\"_multiwidget\";i:1;}','yes'),
 	(81,'uninstall_plugins','a:0:{}','no'),
 	(82,'timezone_string','','yes'),
 	(83,'page_for_posts','0','yes'),
@@ -273,7 +273,7 @@ VALUES
 	(92,'show_comments_cookies_opt_in','0','yes'),
 	(93,'initial_db_version','38590','yes'),
 	(94,'wp_user_roles','a:5:{s:13:\"administrator\";a:2:{s:4:\"name\";s:13:\"Administrator\";s:12:\"capabilities\";a:61:{s:13:\"switch_themes\";b:1;s:11:\"edit_themes\";b:1;s:16:\"activate_plugins\";b:1;s:12:\"edit_plugins\";b:1;s:10:\"edit_users\";b:1;s:10:\"edit_files\";b:1;s:14:\"manage_options\";b:1;s:17:\"moderate_comments\";b:1;s:17:\"manage_categories\";b:1;s:12:\"manage_links\";b:1;s:12:\"upload_files\";b:1;s:6:\"import\";b:1;s:15:\"unfiltered_html\";b:1;s:10:\"edit_posts\";b:1;s:17:\"edit_others_posts\";b:1;s:20:\"edit_published_posts\";b:1;s:13:\"publish_posts\";b:1;s:10:\"edit_pages\";b:1;s:4:\"read\";b:1;s:8:\"level_10\";b:1;s:7:\"level_9\";b:1;s:7:\"level_8\";b:1;s:7:\"level_7\";b:1;s:7:\"level_6\";b:1;s:7:\"level_5\";b:1;s:7:\"level_4\";b:1;s:7:\"level_3\";b:1;s:7:\"level_2\";b:1;s:7:\"level_1\";b:1;s:7:\"level_0\";b:1;s:17:\"edit_others_pages\";b:1;s:20:\"edit_published_pages\";b:1;s:13:\"publish_pages\";b:1;s:12:\"delete_pages\";b:1;s:19:\"delete_others_pages\";b:1;s:22:\"delete_published_pages\";b:1;s:12:\"delete_posts\";b:1;s:19:\"delete_others_posts\";b:1;s:22:\"delete_published_posts\";b:1;s:20:\"delete_private_posts\";b:1;s:18:\"edit_private_posts\";b:1;s:18:\"read_private_posts\";b:1;s:20:\"delete_private_pages\";b:1;s:18:\"edit_private_pages\";b:1;s:18:\"read_private_pages\";b:1;s:12:\"delete_users\";b:1;s:12:\"create_users\";b:1;s:17:\"unfiltered_upload\";b:1;s:14:\"edit_dashboard\";b:1;s:14:\"update_plugins\";b:1;s:14:\"delete_plugins\";b:1;s:15:\"install_plugins\";b:1;s:13:\"update_themes\";b:1;s:14:\"install_themes\";b:1;s:11:\"update_core\";b:1;s:10:\"list_users\";b:1;s:12:\"remove_users\";b:1;s:13:\"promote_users\";b:1;s:18:\"edit_theme_options\";b:1;s:13:\"delete_themes\";b:1;s:6:\"export\";b:1;}}s:6:\"editor\";a:2:{s:4:\"name\";s:6:\"Editor\";s:12:\"capabilities\";a:34:{s:17:\"moderate_comments\";b:1;s:17:\"manage_categories\";b:1;s:12:\"manage_links\";b:1;s:12:\"upload_files\";b:1;s:15:\"unfiltered_html\";b:1;s:10:\"edit_posts\";b:1;s:17:\"edit_others_posts\";b:1;s:20:\"edit_published_posts\";b:1;s:13:\"publish_posts\";b:1;s:10:\"edit_pages\";b:1;s:4:\"read\";b:1;s:7:\"level_7\";b:1;s:7:\"level_6\";b:1;s:7:\"level_5\";b:1;s:7:\"level_4\";b:1;s:7:\"level_3\";b:1;s:7:\"level_2\";b:1;s:7:\"level_1\";b:1;s:7:\"level_0\";b:1;s:17:\"edit_others_pages\";b:1;s:20:\"edit_published_pages\";b:1;s:13:\"publish_pages\";b:1;s:12:\"delete_pages\";b:1;s:19:\"delete_others_pages\";b:1;s:22:\"delete_published_pages\";b:1;s:12:\"delete_posts\";b:1;s:19:\"delete_others_posts\";b:1;s:22:\"delete_published_posts\";b:1;s:20:\"delete_private_posts\";b:1;s:18:\"edit_private_posts\";b:1;s:18:\"read_private_posts\";b:1;s:20:\"delete_private_pages\";b:1;s:18:\"edit_private_pages\";b:1;s:18:\"read_private_pages\";b:1;}}s:6:\"author\";a:2:{s:4:\"name\";s:6:\"Author\";s:12:\"capabilities\";a:10:{s:12:\"upload_files\";b:1;s:10:\"edit_posts\";b:1;s:20:\"edit_published_posts\";b:1;s:13:\"publish_posts\";b:1;s:4:\"read\";b:1;s:7:\"level_2\";b:1;s:7:\"level_1\";b:1;s:7:\"level_0\";b:1;s:12:\"delete_posts\";b:1;s:22:\"delete_published_posts\";b:1;}}s:11:\"contributor\";a:2:{s:4:\"name\";s:11:\"Contributor\";s:12:\"capabilities\";a:5:{s:10:\"edit_posts\";b:1;s:4:\"read\";b:1;s:7:\"level_1\";b:1;s:7:\"level_0\";b:1;s:12:\"delete_posts\";b:1;}}s:10:\"subscriber\";a:2:{s:4:\"name\";s:10:\"Subscriber\";s:12:\"capabilities\";a:2:{s:4:\"read\";b:1;s:7:\"level_0\";b:1;}}}','yes'),
-	(95,'fresh_site','1','yes'),
+	(95,'fresh_site','0','yes'),
 	(96,'widget_search','a:2:{i:2;a:1:{s:5:\"title\";s:0:\"\";}s:12:\"_multiwidget\";i:1;}','yes'),
 	(97,'widget_recent-posts','a:2:{i:2;a:2:{s:5:\"title\";s:0:\"\";s:6:\"number\";i:5;}s:12:\"_multiwidget\";i:1;}','yes'),
 	(98,'widget_recent-comments','a:2:{i:2;a:2:{s:5:\"title\";s:0:\"\";s:6:\"number\";i:5;}s:12:\"_multiwidget\";i:1;}','yes'),
@@ -291,8 +291,8 @@ VALUES
 	(110,'widget_tag_cloud','a:1:{s:12:\"_multiwidget\";i:1;}','yes'),
 	(111,'widget_nav_menu','a:1:{s:12:\"_multiwidget\";i:1;}','yes'),
 	(112,'widget_custom_html','a:1:{s:12:\"_multiwidget\";i:1;}','yes'),
-	(113,'cron','a:3:{i:1541601323;a:4:{s:34:\"wp_privacy_delete_old_export_files\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:6:\"hourly\";s:4:\"args\";a:0:{}s:8:\"interval\";i:3600;}}s:16:\"wp_version_check\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:10:\"twicedaily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:43200;}}s:17:\"wp_update_plugins\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:10:\"twicedaily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:43200;}}s:16:\"wp_update_themes\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:10:\"twicedaily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:43200;}}}i:1541601331;a:2:{s:19:\"wp_scheduled_delete\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:5:\"daily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:86400;}}s:25:\"delete_expired_transients\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:5:\"daily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:86400;}}}s:7:\"version\";i:2;}','yes'),
-	(114,'_transient_doing_cron','1541602109.7781078815460205078125','yes'),
+	(113,'cron','a:4:{i:1541601323;a:4:{s:34:\"wp_privacy_delete_old_export_files\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:6:\"hourly\";s:4:\"args\";a:0:{}s:8:\"interval\";i:3600;}}s:16:\"wp_version_check\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:10:\"twicedaily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:43200;}}s:17:\"wp_update_plugins\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:10:\"twicedaily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:43200;}}s:16:\"wp_update_themes\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:10:\"twicedaily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:43200;}}}i:1541601331;a:2:{s:19:\"wp_scheduled_delete\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:5:\"daily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:86400;}}s:25:\"delete_expired_transients\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:5:\"daily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:86400;}}}i:1541605630;a:1:{s:8:\"do_pings\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:2:{s:8:\"schedule\";b:0;s:4:\"args\";a:0:{}}}}s:7:\"version\";i:2;}','yes'),
+	(114,'_transient_doing_cron','1541608584.9814040660858154296875','yes'),
 	(115,'secure_auth_key','|Kp>h0M}2$^P*KyE^|mD] OO: Ysg_r%(6(eDwVoF.v1(B~Uqd,E`.h,!g|E%JCo','no'),
 	(116,'secure_auth_salt','aB<Rk_~X~#pijGgC+1EfbWrF1LwD%_c+G*8Zzq{mSCWJwOPbLq/blV0qj,ksC(._','no'),
 	(117,'logged_in_key','k2X!3S?}YF=nM53LJVegD3H{,wC8}t|.woyO#jQ:gJ:Es`6wo{IOyL{Y1nsjWth3','no'),
@@ -320,8 +320,11 @@ VALUES
 	(136,'_transient_feed_mod_d117b5738fbd35bd8c0391cda1f2b5d9','1541601336','no'),
 	(137,'_transient_timeout_dash_v2_88ae138922fe95674369b1cb3d215a2b','1541644536','no'),
 	(138,'_transient_dash_v2_88ae138922fe95674369b1cb3d215a2b','<div class=\"rss-widget\"><ul><li><a class=\'rsswidget\' href=\'https://wordpress.org/news/2018/11/wordpress-5-0-beta-3/\'>WordPress 5.0 Beta 3</a></li></ul></div><div class=\"rss-widget\"><ul><li><a class=\'rsswidget\' href=\'https://wptavern.com/nidhi-jain-is-awarded-the-kim-parsell-travel-scholarship\'>WPTavern: Nidhi Jain Is Awarded the Kim Parsell Travel Scholarship</a></li><li><a class=\'rsswidget\' href=\'https://heropress.com/essays/accidental-activist/#utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=accidental-activist\'>HeroPress: Accidental Activist</a></li><li><a class=\'rsswidget\' href=\'https://wptavern.com/authors-of-popular-wordpress-org-themes-rolling-out-gutenberg-compatibility-updates-ahead-of-5-0-release\'>WPTavern: Authors of Popular WordPress.org Themes Rolling Out Gutenberg Compatibility Updates Ahead of 5.0 Release</a></li></ul></div>','no'),
-	(139,'theme_mods_twentyseventeen','a:1:{s:18:\"custom_css_post_id\";i:-1;}','yes'),
-	(140,'_transient_is_multi_author','0','yes');
+	(139,'theme_mods_twentyseventeen','a:5:{s:18:\"custom_css_post_id\";i:-1;s:16:\"header_textcolor\";s:0:\"\";s:12:\"header_image\";s:86:\"https://rideshare.localhost/wordpress/wp-content/uploads/2018/11/cropped-long-road.jpg\";s:17:\"header_image_data\";O:8:\"stdClass\":5:{s:13:\"attachment_id\";i:9;s:3:\"url\";s:86:\"https://rideshare.localhost/wordpress/wp-content/uploads/2018/11/cropped-long-road.jpg\";s:13:\"thumbnail_url\";s:86:\"https://rideshare.localhost/wordpress/wp-content/uploads/2018/11/cropped-long-road.jpg\";s:6:\"height\";i:1200;s:5:\"width\";i:2000;}s:18:\"nav_menu_locations\";a:1:{s:3:\"top\";i:2;}}','yes'),
+	(145,'auth_key','%A9jn%/J&ur%oA;)1[BHpW,0@p4]|wxE.A(IMr6+6!@s}dmxdwKCbj&Yug.b.#]&','no'),
+	(146,'auth_salt','tayVi~I+GVdhJ,EGS<25$L=cD-O?n9XSo4BvzquQWs,fPV|gu^Fpeo54O&,qwvk]','no'),
+	(149,'nav_menu_options','a:2:{i:0;b:0;s:8:\"auto_add\";a:0:{}}','yes'),
+	(151,'_transient_is_multi_author','0','yes');
 
 /*!40000 ALTER TABLE `wp_options` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -348,7 +351,36 @@ LOCK TABLES `wp_postmeta` WRITE;
 INSERT INTO `wp_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`)
 VALUES
 	(1,2,'_wp_page_template','default'),
-	(2,3,'_wp_page_template','default');
+	(2,3,'_wp_page_template','default'),
+	(3,1,'_edit_lock','1541608369:1'),
+	(4,1,'_edit_last','1'),
+	(5,1,'_pingme','1'),
+	(6,1,'_encloseme','1'),
+	(7,1,'_pingme','1'),
+	(8,1,'_encloseme','1'),
+	(9,7,'_wp_trash_meta_status','publish'),
+	(10,7,'_wp_trash_meta_time','1541608170'),
+	(11,8,'_wp_attached_file','2018/11/long-road.jpg'),
+	(12,8,'_wp_attachment_metadata','a:5:{s:5:\"width\";i:1920;s:6:\"height\";i:1200;s:4:\"file\";s:21:\"2018/11/long-road.jpg\";s:5:\"sizes\";a:6:{s:9:\"thumbnail\";a:4:{s:4:\"file\";s:21:\"long-road-150x150.jpg\";s:5:\"width\";i:150;s:6:\"height\";i:150;s:9:\"mime-type\";s:10:\"image/jpeg\";}s:6:\"medium\";a:4:{s:4:\"file\";s:21:\"long-road-300x188.jpg\";s:5:\"width\";i:300;s:6:\"height\";i:188;s:9:\"mime-type\";s:10:\"image/jpeg\";}s:12:\"medium_large\";a:4:{s:4:\"file\";s:21:\"long-road-768x480.jpg\";s:5:\"width\";i:768;s:6:\"height\";i:480;s:9:\"mime-type\";s:10:\"image/jpeg\";}s:5:\"large\";a:4:{s:4:\"file\";s:22:\"long-road-1024x640.jpg\";s:5:\"width\";i:1024;s:6:\"height\";i:640;s:9:\"mime-type\";s:10:\"image/jpeg\";}s:30:\"twentyseventeen-featured-image\";a:4:{s:4:\"file\";s:23:\"long-road-1920x1200.jpg\";s:5:\"width\";i:1920;s:6:\"height\";i:1200;s:9:\"mime-type\";s:10:\"image/jpeg\";}s:32:\"twentyseventeen-thumbnail-avatar\";a:4:{s:4:\"file\";s:21:\"long-road-100x100.jpg\";s:5:\"width\";i:100;s:6:\"height\";i:100;s:9:\"mime-type\";s:10:\"image/jpeg\";}}s:10:\"image_meta\";a:12:{s:8:\"aperture\";s:1:\"0\";s:6:\"credit\";s:0:\"\";s:6:\"camera\";s:0:\"\";s:7:\"caption\";s:0:\"\";s:17:\"created_timestamp\";s:1:\"0\";s:9:\"copyright\";s:0:\"\";s:12:\"focal_length\";s:1:\"0\";s:3:\"iso\";s:1:\"0\";s:13:\"shutter_speed\";s:1:\"0\";s:5:\"title\";s:0:\"\";s:11:\"orientation\";s:1:\"0\";s:8:\"keywords\";a:0:{}}}'),
+	(13,9,'_wp_attached_file','2018/11/cropped-long-road.jpg'),
+	(14,9,'_wp_attachment_context','custom-header'),
+	(15,9,'_wp_attachment_metadata','a:6:{s:5:\"width\";i:2000;s:6:\"height\";i:1200;s:4:\"file\";s:29:\"2018/11/cropped-long-road.jpg\";s:5:\"sizes\";a:5:{s:9:\"thumbnail\";a:4:{s:4:\"file\";s:29:\"cropped-long-road-150x150.jpg\";s:5:\"width\";i:150;s:6:\"height\";i:150;s:9:\"mime-type\";s:10:\"image/jpeg\";}s:6:\"medium\";a:4:{s:4:\"file\";s:29:\"cropped-long-road-300x180.jpg\";s:5:\"width\";i:300;s:6:\"height\";i:180;s:9:\"mime-type\";s:10:\"image/jpeg\";}s:12:\"medium_large\";a:4:{s:4:\"file\";s:29:\"cropped-long-road-768x461.jpg\";s:5:\"width\";i:768;s:6:\"height\";i:461;s:9:\"mime-type\";s:10:\"image/jpeg\";}s:5:\"large\";a:4:{s:4:\"file\";s:30:\"cropped-long-road-1024x614.jpg\";s:5:\"width\";i:1024;s:6:\"height\";i:614;s:9:\"mime-type\";s:10:\"image/jpeg\";}s:32:\"twentyseventeen-thumbnail-avatar\";a:4:{s:4:\"file\";s:29:\"cropped-long-road-100x100.jpg\";s:5:\"width\";i:100;s:6:\"height\";i:100;s:9:\"mime-type\";s:10:\"image/jpeg\";}}s:10:\"image_meta\";a:12:{s:8:\"aperture\";s:1:\"0\";s:6:\"credit\";s:0:\"\";s:6:\"camera\";s:0:\"\";s:7:\"caption\";s:0:\"\";s:17:\"created_timestamp\";s:1:\"0\";s:9:\"copyright\";s:0:\"\";s:12:\"focal_length\";s:1:\"0\";s:3:\"iso\";s:1:\"0\";s:13:\"shutter_speed\";s:1:\"0\";s:5:\"title\";s:0:\"\";s:11:\"orientation\";s:1:\"0\";s:8:\"keywords\";a:0:{}}s:17:\"attachment_parent\";i:8;}'),
+	(16,9,'_wp_attachment_custom_header_last_used_twentyseventeen','1541608474'),
+	(17,9,'_wp_attachment_is_custom_header','twentyseventeen'),
+	(18,10,'_wp_trash_meta_status','publish'),
+	(19,10,'_wp_trash_meta_time','1541608474'),
+	(20,1,'_pingme','1'),
+	(21,1,'_encloseme','1'),
+	(22,12,'_menu_item_type','post_type'),
+	(23,12,'_menu_item_menu_item_parent','0'),
+	(24,12,'_menu_item_object_id','2'),
+	(25,12,'_menu_item_object','page'),
+	(26,12,'_menu_item_target',''),
+	(27,12,'_menu_item_classes','a:1:{i:0;s:0:\"\";}'),
+	(28,12,'_menu_item_xfn',''),
+	(29,12,'_menu_item_url',''),
+	(31,2,'_edit_lock','1541608468:1'),
+	(32,2,'_edit_last','1');
 
 /*!40000 ALTER TABLE `wp_postmeta` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -395,10 +427,19 @@ LOCK TABLES `wp_posts` WRITE;
 
 INSERT INTO `wp_posts` (`ID`, `post_author`, `post_date`, `post_date_gmt`, `post_content`, `post_title`, `post_excerpt`, `post_status`, `comment_status`, `ping_status`, `post_password`, `post_name`, `to_ping`, `pinged`, `post_modified`, `post_modified_gmt`, `post_content_filtered`, `post_parent`, `guid`, `menu_order`, `post_type`, `post_mime_type`, `comment_count`)
 VALUES
-	(1,1,'2018-11-07 14:35:19','2018-11-07 14:35:19','Welcome to WordPress. This is your first post. Edit or delete it, then start writing!','Hello world!','','publish','open','open','','hello-world','','','2018-11-07 14:35:19','2018-11-07 14:35:19','',0,'https://rideshare.localhost/wordpress/?p=1',0,'post','',1),
-	(2,1,'2018-11-07 14:35:19','2018-11-07 14:35:19','This is an example page. It\'s different from a blog post because it will stay in one place and will show up in your site navigation (in most themes). Most people start with an About page that introduces them to potential site visitors. It might say something like this:\n\n<blockquote>Hi there! I\'m a bike messenger by day, aspiring actor by night, and this is my website. I live in Los Angeles, have a great dog named Jack, and I like pi&#241;a coladas. (And gettin\' caught in the rain.)</blockquote>\n\n...or something like this:\n\n<blockquote>The XYZ Doohickey Company was founded in 1971, and has been providing quality doohickeys to the public ever since. Located in Gotham City, XYZ employs over 2,000 people and does all kinds of awesome things for the Gotham community.</blockquote>\n\nAs a new WordPress user, you should go to <a href=\"https://rideshare.localhost/wordpress/wp-admin/\">your dashboard</a> to delete this page and create new pages for your content. Have fun!','Sample Page','','publish','closed','open','','sample-page','','','2018-11-07 14:35:19','2018-11-07 14:35:19','',0,'https://rideshare.localhost/wordpress/?page_id=2',0,'page','',0),
+	(1,1,'2018-11-07 14:35:19','2018-11-07 14:35:19','Verbage about the company here...','Welcome','','publish','open','open','','hello-world','','','2018-11-07 16:35:09','2018-11-07 16:35:09','',0,'https://rideshare.localhost/wordpress/?p=1',0,'post','',1),
+	(2,1,'2018-11-07 14:35:19','2018-11-07 14:35:19','This is an example page. It\'s different from a blog post because it will stay in one place and will show up in your site navigation (in most themes). Most people start with an About page that introduces them to potential site visitors. It might say something like this:\r\n<blockquote>Hi there! I\'m a bike messenger by day, aspiring actor by night, and this is my website. I live in Los Angeles, have a great dog named Jack, and I like piña coladas. (And gettin\' caught in the rain.)</blockquote>\r\n...or something like this:\r\n<blockquote>The XYZ Doohickey Company was founded in 1971, and has been providing quality doohickeys to the public ever since. Located in Gotham City, XYZ employs over 2,000 people and does all kinds of awesome things for the Gotham community.</blockquote>\r\nAs a new WordPress user, you should go to <a href=\"https://rideshare.localhost/wordpress/wp-admin/\">your dashboard</a> to delete this page and create new pages for your content. Have fun!','About Us','','publish','closed','open','','sample-page','','','2018-11-07 16:36:48','2018-11-07 16:36:48','',0,'https://rideshare.localhost/wordpress/?page_id=2',0,'page','',0),
 	(3,1,'2018-11-07 14:35:19','2018-11-07 14:35:19','<h2>Who we are</h2><p>Our website address is: https://rideshare.localhost/wordpress.</p><h2>What personal data we collect and why we collect it</h2><h3>Comments</h3><p>When visitors leave comments on the site we collect the data shown in the comments form, and also the visitor&#8217;s IP address and browser user agent string to help spam detection.</p><p>An anonymized string created from your email address (also called a hash) may be provided to the Gravatar service to see if you are using it. The Gravatar service privacy policy is available here: https://automattic.com/privacy/. After approval of your comment, your profile picture is visible to the public in the context of your comment.</p><h3>Media</h3><p>If you upload images to the website, you should avoid uploading images with embedded location data (EXIF GPS) included. Visitors to the website can download and extract any location data from images on the website.</p><h3>Contact forms</h3><h3>Cookies</h3><p>If you leave a comment on our site you may opt-in to saving your name, email address and website in cookies. These are for your convenience so that you do not have to fill in your details again when you leave another comment. These cookies will last for one year.</p><p>If you have an account and you log in to this site, we will set a temporary cookie to determine if your browser accepts cookies. This cookie contains no personal data and is discarded when you close your browser.</p><p>When you log in, we will also set up several cookies to save your login information and your screen display choices. Login cookies last for two days, and screen options cookies last for a year. If you select &quot;Remember Me&quot;, your login will persist for two weeks. If you log out of your account, the login cookies will be removed.</p><p>If you edit or publish an article, an additional cookie will be saved in your browser. This cookie includes no personal data and simply indicates the post ID of the article you just edited. It expires after 1 day.</p><h3>Embedded content from other websites</h3><p>Articles on this site may include embedded content (e.g. videos, images, articles, etc.). Embedded content from other websites behaves in the exact same way as if the visitor has visited the other website.</p><p>These websites may collect data about you, use cookies, embed additional third-party tracking, and monitor your interaction with that embedded content, including tracking your interaction with the embedded content if you have an account and are logged in to that website.</p><h3>Analytics</h3><h2>Who we share your data with</h2><h2>How long we retain your data</h2><p>If you leave a comment, the comment and its metadata are retained indefinitely. This is so we can recognize and approve any follow-up comments automatically instead of holding them in a moderation queue.</p><p>For users that register on our website (if any), we also store the personal information they provide in their user profile. All users can see, edit, or delete their personal information at any time (except they cannot change their username). Website administrators can also see and edit that information.</p><h2>What rights you have over your data</h2><p>If you have an account on this site, or have left comments, you can request to receive an exported file of the personal data we hold about you, including any data you have provided to us. You can also request that we erase any personal data we hold about you. This does not include any data we are obliged to keep for administrative, legal, or security purposes.</p><h2>Where we send your data</h2><p>Visitor comments may be checked through an automated spam detection service.</p><h2>Your contact information</h2><h2>Additional information</h2><h3>How we protect your data</h3><h3>What data breach procedures we have in place</h3><h3>What third parties we receive data from</h3><h3>What automated decision making and/or profiling we do with user data</h3><h3>Industry regulatory disclosure requirements</h3>','Privacy Policy','','draft','closed','open','','privacy-policy','','','2018-11-07 14:35:19','2018-11-07 14:35:19','',0,'https://rideshare.localhost/wordpress/?page_id=3',0,'page','',0),
-	(4,1,'2018-11-07 14:35:32','0000-00-00 00:00:00','','Auto Draft','','auto-draft','open','open','','','','','2018-11-07 14:35:32','0000-00-00 00:00:00','',0,'https://rideshare.localhost/wordpress/?p=4',0,'post','',0);
+	(4,1,'2018-11-07 14:35:32','0000-00-00 00:00:00','','Auto Draft','','auto-draft','open','open','','','','','2018-11-07 14:35:32','0000-00-00 00:00:00','',0,'https://rideshare.localhost/wordpress/?p=4',0,'post','',0),
+	(5,1,'2018-11-07 15:47:10','2018-11-07 15:47:10','This is the front page','Hello world!','','inherit','closed','closed','','1-revision-v1','','','2018-11-07 15:47:10','2018-11-07 15:47:10','',1,'https://rideshare.localhost/wordpress/?p=5',0,'revision','',0),
+	(6,1,'2018-11-07 15:48:03','2018-11-07 15:48:03','This is the front page! welcome!','Hello world!','','inherit','closed','closed','','1-revision-v1','','','2018-11-07 15:48:03','2018-11-07 15:48:03','',1,'https://rideshare.localhost/wordpress/?p=6',0,'revision','',0),
+	(7,1,'2018-11-07 16:29:30','2018-11-07 16:29:30','{\n    \"blogdescription\": {\n        \"value\": \"A Non-Profit RideShare Service\",\n        \"type\": \"option\",\n        \"user_id\": 1,\n        \"date_modified_gmt\": \"2018-11-07 16:29:30\"\n    },\n    \"twentyseventeen::header_textcolor\": {\n        \"value\": \"\",\n        \"type\": \"theme_mod\",\n        \"user_id\": 1,\n        \"date_modified_gmt\": \"2018-11-07 16:29:30\"\n    }\n}','','','trash','closed','closed','','b151e6f4-163b-4e6e-969a-c7322b63fe12','','','2018-11-07 16:29:30','2018-11-07 16:29:30','',0,'https://rideshare.localhost/wordpress/?p=7',0,'customize_changeset','',0),
+	(8,1,'2018-11-07 16:34:13','2018-11-07 16:34:13','','long-road','','inherit','open','closed','','long-road','','','2018-11-07 16:34:13','2018-11-07 16:34:13','',0,'https://rideshare.localhost/wordpress/wp-content/uploads/2018/11/long-road.jpg',0,'attachment','image/jpeg',0),
+	(9,1,'2018-11-07 16:34:24','2018-11-07 16:34:24','','cropped-long-road.jpg','','inherit','open','closed','','cropped-long-road-jpg','','','2018-11-07 16:34:24','2018-11-07 16:34:24','',0,'https://rideshare.localhost/wordpress/wp-content/uploads/2018/11/cropped-long-road.jpg',0,'attachment','image/jpeg',0),
+	(10,1,'2018-11-07 16:34:34','2018-11-07 16:34:34','{\n    \"twentyseventeen::header_image\": {\n        \"value\": \"https://rideshare.localhost/wordpress/wp-content/uploads/2018/11/cropped-long-road.jpg\",\n        \"type\": \"theme_mod\",\n        \"user_id\": 1,\n        \"date_modified_gmt\": \"2018-11-07 16:34:34\"\n    },\n    \"twentyseventeen::header_image_data\": {\n        \"value\": {\n            \"url\": \"https://rideshare.localhost/wordpress/wp-content/uploads/2018/11/cropped-long-road.jpg\",\n            \"thumbnail_url\": \"https://rideshare.localhost/wordpress/wp-content/uploads/2018/11/cropped-long-road.jpg\",\n            \"timestamp\": 1541608465124,\n            \"attachment_id\": 9,\n            \"width\": 2000,\n            \"height\": 1200\n        },\n        \"type\": \"theme_mod\",\n        \"user_id\": 1,\n        \"date_modified_gmt\": \"2018-11-07 16:34:34\"\n    }\n}','','','trash','closed','closed','','20701905-7394-463d-9413-9618d8f9e529','','','2018-11-07 16:34:34','2018-11-07 16:34:34','',0,'https://rideshare.localhost/wordpress/?p=10',0,'customize_changeset','',0),
+	(11,1,'2018-11-07 16:35:09','2018-11-07 16:35:09','Verbage about the company here...','Welcome','','inherit','closed','closed','','1-revision-v1','','','2018-11-07 16:35:09','2018-11-07 16:35:09','',1,'https://rideshare.localhost/wordpress/?p=11',0,'revision','',0),
+	(12,1,'2018-11-07 16:36:09','2018-11-07 16:36:09',' ','','','publish','closed','closed','','12','','','2018-11-07 16:36:09','2018-11-07 16:36:09','',0,'https://rideshare.localhost/wordpress/?p=12',1,'nav_menu_item','',0),
+	(13,1,'2018-11-07 16:36:48','2018-11-07 16:36:48','This is an example page. It\'s different from a blog post because it will stay in one place and will show up in your site navigation (in most themes). Most people start with an About page that introduces them to potential site visitors. It might say something like this:\r\n<blockquote>Hi there! I\'m a bike messenger by day, aspiring actor by night, and this is my website. I live in Los Angeles, have a great dog named Jack, and I like piña coladas. (And gettin\' caught in the rain.)</blockquote>\r\n...or something like this:\r\n<blockquote>The XYZ Doohickey Company was founded in 1971, and has been providing quality doohickeys to the public ever since. Located in Gotham City, XYZ employs over 2,000 people and does all kinds of awesome things for the Gotham community.</blockquote>\r\nAs a new WordPress user, you should go to <a href=\"https://rideshare.localhost/wordpress/wp-admin/\">your dashboard</a> to delete this page and create new pages for your content. Have fun!','About Us','','inherit','closed','closed','','2-revision-v1','','','2018-11-07 16:36:48','2018-11-07 16:36:48','',2,'https://rideshare.localhost/wordpress/?p=13',0,'revision','',0);
 
 /*!40000 ALTER TABLE `wp_posts` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -422,7 +463,8 @@ LOCK TABLES `wp_term_relationships` WRITE;
 
 INSERT INTO `wp_term_relationships` (`object_id`, `term_taxonomy_id`, `term_order`)
 VALUES
-	(1,1,0);
+	(1,1,0),
+	(12,2,0);
 
 /*!40000 ALTER TABLE `wp_term_relationships` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -450,7 +492,8 @@ LOCK TABLES `wp_term_taxonomy` WRITE;
 
 INSERT INTO `wp_term_taxonomy` (`term_taxonomy_id`, `term_id`, `taxonomy`, `description`, `parent`, `count`)
 VALUES
-	(1,1,'category','',0,1);
+	(1,1,'category','',0,1),
+	(2,2,'nav_menu','',0,1);
 
 /*!40000 ALTER TABLE `wp_term_taxonomy` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -493,7 +536,8 @@ LOCK TABLES `wp_terms` WRITE;
 
 INSERT INTO `wp_terms` (`term_id`, `name`, `slug`, `term_group`)
 VALUES
-	(1,'Uncategorized','uncategorized',0);
+	(1,'Uncategorized','uncategorized',0),
+	(2,'main-navigation','main-navigation',0);
 
 /*!40000 ALTER TABLE `wp_terms` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -536,7 +580,11 @@ VALUES
 	(15,1,'show_welcome_panel','1'),
 	(16,1,'session_tokens','a:1:{s:64:\"505d4a00d35f1e12e2b096f6c4bb0fdeb9ee3e05cebb58fa5d0f3d2685628d71\";a:4:{s:10:\"expiration\";i:1542810930;s:2:\"ip\";s:10:\"172.18.0.6\";s:2:\"ua\";s:120:\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36\";s:5:\"login\";i:1541601330;}}'),
 	(17,1,'wp_dashboard_quick_press_last_post_id','4'),
-	(18,1,'community-events-location','a:1:{s:2:\"ip\";s:10:\"172.17.0.0\";}');
+	(18,1,'community-events-location','a:1:{s:2:\"ip\";s:10:\"172.17.0.0\";}'),
+	(19,1,'wp_user-settings','libraryContent=browse'),
+	(20,1,'wp_user-settings-time','1541608485'),
+	(21,1,'managenav-menuscolumnshidden','a:5:{i:0;s:11:\"link-target\";i:1;s:11:\"css-classes\";i:2;s:3:\"xfn\";i:3;s:11:\"description\";i:4;s:15:\"title-attribute\";}'),
+	(22,1,'metaboxhidden_nav-menus','a:2:{i:0;s:12:\"add-post_tag\";i:1;s:15:\"add-post_format\";}');
 
 /*!40000 ALTER TABLE `wp_usermeta` ENABLE KEYS */;
 UNLOCK TABLES;
