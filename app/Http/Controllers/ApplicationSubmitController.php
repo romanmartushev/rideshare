@@ -24,17 +24,17 @@ class ApplicationSubmitController extends Controller
             'prevent' => $request->prevent,
             'prevent_txt' => $request->prevent_txt,
             'legal' => $request->legal,
-            'record_education' => json_decode($request->record_education),
-            'work_history' => json_decode($request->work_history),
+            'record_education' => json_decode(str_replace("\\","",$request->record_education)),
+            'work_history' => json_decode(str_replace("\\","",$request->work_history)),
             'skills' => $request->skills,
-            'references' =>  json_decode($request->references)
+            'references' =>  json_decode(str_replace("\\","",$request->references))
         ];
         try{
             \Mail::send('/email/job_application',$info, function ($message) use ($request) {
                 $files = $request->allFiles();
                 $message->from(env("MAIL_FROM","donotreply@rideshare.net"));
                 $message->to(env("JOB_APPLICATION_MAIL_TO","admin@rideshare.net"));
-                $message->subject("Job Application");
+                $message->subject("Volunteer Application");
                 foreach($files as $file){
                     $message->attach($file->getPathName(),['as' => $file->getClientOriginalName()]);
                 }

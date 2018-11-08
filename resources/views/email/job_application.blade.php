@@ -3,7 +3,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <Title>APPLICATION FOR EMPLOYMENT</Title>
+    <Title>APPLICATION FOR VOLUNTEER</Title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 </head>
 <style>
@@ -38,7 +38,7 @@
 <body>
 <div class="container" id="application_submit">
     <div class="row">
-        <h2>APPLICATION FOR EMPLOYMENT</h2>
+        <h2>APPLICATION FOR VOLUNTEER</h2>
     </div>
     <div>
         <div class="row">
@@ -136,63 +136,63 @@
                 <input class="form-control" readonly value="{{$legal}}">
             </div>
         </div>
-        <div class="row bg-color-black margin-bottom-xs">
-            <div class="col-sm-12 bold txt-size-md txt-color-white">Record Of Education</div>
-        </div>
         @if(count($record_education) > 0)
+            <div class="row bg-color-black margin-bottom-xs">
+                <div class="col-sm-12 bold txt-size-md txt-color-white">Record Of Education</div>
+            </div>
             @foreach($record_education as $record)
-            <div class="row">
-                <div class="form-group col-sm-6">
-                    <label for="school">Name/Address Of School:</label>
-                    <input class="form-control" readonly value="{{$record->school}}">
+                <div class="row">
+                    <div class="form-group col-sm-6">
+                        <label for="school">Name/Address Of School:</label>
+                        <input class="form-control" readonly value="{{$record->school}}">
+                    </div>
+                    <div class="form-group col-sm-6">
+                        <label for="study">Course Of Study:</label>
+                        <input class="form-control" readonly value="{{$record->study}}">
+                    </div>
+                    <div class="form-group col-sm-6">
+                        <label for="yrs_completed">YRS Completed:</label>
+                        <input class="form-control" readonly value="{{$record->yrs_completed}}">
+                    </div>
+                    <div class="form-group col-sm-6">
+                        <label for="graduate">Graduate?:</label>
+                        <input class="form-control" readonly value="{{$record->graduate}}">
+                    </div>
+                    <div class="form-group col-sm-6">
+                        <label for="diploma">Diploma/Degree Rec'd:</label>
+                        <input class="form-control" readonly value="{{$record->diploma}}">
+                    </div>
                 </div>
-                <div class="form-group col-sm-6">
-                    <label for="study">Course Of Study:</label>
-                    <input class="form-control" readonly value="{{$record->study}}">
-                </div>
-                <div class="form-group col-sm-6">
-                    <label for="yrs_completed">YRS Completed:</label>
-                    <input class="form-control" readonly value="{{$record->yrs_completed}}">
-                </div>
-                <div class="form-group col-sm-6">
-                    <label for="graduate">Graduate?:</label>
-                    <input class="form-control" readonly value="{{$record->graduate}}">
-                </div>
-                <div class="form-group col-sm-6">
-                    <label for="diploma">Diploma/Degree Rec'd:</label>
-                    <input class="form-control" readonly value="{{$record->diploma}}">
-                </div>
-            </div>
-        @endforeach
+            @endforeach
         @endif
-        <div class="row bg-color-black margin-bottom-xs">
-            <div class="col-sm-12 bold txt-size-md txt-color-white">Prior Work History</div>
-        </div>
         @if(count($work_history) > 0)
-            @foreach($work_history as $record)
-            <div class="row">
-                <div class="form-group col-sm-6">
-                    <label for="dates_to_from">Dates To-From:</label>
-                    <input class="form-control" readonly value="{{$record->dates_to_from}}">
-                </div>
-                <div class="form-group col-sm-6">
-                    <label for="employer">Employer Name, Address & Phone:</label>
-                    <input class="form-control" readonly value="{{$record->employer}}">
-                </div>
-                <div class="form-group col-sm-6">
-                    <label for="rate_pay_start_finish">Rate Of Pay Start-Finish:</label>
-                    <input class="form-control" readonly value="{{$record->rate_pay_start_finish}}">
-                </div>
-                <div class="form-group col-sm-6">
-                    <label for="sup_name_title">Supervisor's Name & Title:</label>
-                    <input class="form-control" readonly value="{{$record->sup_name_title}}">
-                </div>
-                <div class="form-group col-sm-6">
-                    <label for="reason_left">Reason For Leaving:</label>
-                    <input class="form-control" readonly value="{{$record->reason_left}}">
-                </div>
+            <div class="row bg-color-black margin-bottom-xs">
+                <div class="col-sm-12 bold txt-size-md txt-color-white">Prior Work History</div>
             </div>
-        @endforeach
+            @foreach($work_history as $record)
+                <div class="row">
+                    <div class="form-group col-sm-6">
+                        <label for="dates_to_from">Dates To-From:</label>
+                        <input class="form-control" readonly value="{{$record->dates_to_from}}">
+                    </div>
+                    <div class="form-group col-sm-6">
+                        <label for="employer">Employer Name, Address & Phone:</label>
+                        <input class="form-control" readonly value="{{$record->employer}}">
+                    </div>
+                    <div class="form-group col-sm-6">
+                        <label for="rate_pay_start_finish">Rate Of Pay Start-Finish:</label>
+                        <input class="form-control" readonly value="{{$record->rate_pay_start_finish}}">
+                    </div>
+                    <div class="form-group col-sm-6">
+                        <label for="sup_name_title">Supervisor's Name & Title:</label>
+                        <input class="form-control" readonly value="{{$record->sup_name_title}}">
+                    </div>
+                    <div class="form-group col-sm-6">
+                        <label for="reason_left">Reason For Leaving:</label>
+                        <input class="form-control" readonly value="{{$record->reason_left}}">
+                    </div>
+                </div>
+            @endforeach
         @endif
         @if($skills != "")
             <div class="row bg-color-black margin-bottom-xs">
@@ -205,22 +205,22 @@
                 </div>
             </div>
         @endif
-        <div class="row bg-color-black margin-bottom-xs">
-            <div class="col-sm-12 bold txt-size-md txt-color-white">References</div>
-        </div>
         @if(count($references) > 0)
-            @foreach($references as $record)
-            <div class="row">
-                <div class="form-group col-sm-6">
-                    <label for="ref_name">Name:</label>
-                    <input class="form-control" readonly value="{{$record->name}}">
-                </div>
-                <div class="form-group col-sm-6">
-                    <label for="ref_phone">Phone:</label>
-                    <input class="form-control" readonly value="{{$record->phone}}">
-                </div>
+            <div class="row bg-color-black margin-bottom-xs">
+                <div class="col-sm-12 bold txt-size-md txt-color-white">References</div>
             </div>
-        @endforeach
+            @foreach($references as $record)
+                <div class="row">
+                    <div class="form-group col-sm-6">
+                        <label for="ref_name">Name:</label>
+                        <input class="form-control" readonly value="{{$record->name}}">
+                    </div>
+                    <div class="form-group col-sm-6">
+                        <label for="ref_phone">Phone:</label>
+                        <input class="form-control" readonly value="{{$record->phone}}">
+                    </div>
+                </div>
+            @endforeach
         @endif
     </div>
 </div>

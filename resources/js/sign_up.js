@@ -60,11 +60,11 @@ var app = new Vue({
             var vm = this;
             var url = "?last_name="+this.last_name+"&middle_initial="+this.middle_initial;
             url += "&first_name="+this.first_name+"&address="+this.address+"&city="+this.city+"&state="+this.state+"&zip="+this.zip+"&phone_number="+this.phone_number+"&referred="+this.referred;
-            url += "&email="+this.email+"&township="+this.township+"&day_phone="+this.day_phone+"&eight_teen="+this.eight_teen+"&hours="+this.hours+"&prevent="+this.prevent;
+            url += "&email="+this.email+"&township="+this.township+"&day_phone="+this.day_phone+"&eight_teen="+this.eight_teen+"&prevent="+this.prevent;
             url += "&prevent_txt="+this.prevent_txt+"&legal="+this.legal +"&skills="+this.skills;
             var formData = new FormData();
             for( var i = 0; i < this.files.length; i ++) {
-                formData.append(this.files[i].id,this.files[i].file)
+                formData.append(this.files[i].id,this.files[i].file);
             }
             formData.append('record_education', JSON.stringify(this.record_education));
             formData.append('work_history', JSON.stringify(this.work_history));
