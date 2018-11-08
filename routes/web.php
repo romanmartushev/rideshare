@@ -14,14 +14,17 @@
 Route::get('/', function () {
     return redirect("/wordpress");
 });
+
 Route::get('/welcome', function(){
    return view('welcome');
 });
+
 Route::get('/make-request', function(){
-    $menu_items = [];
-    $menu = wp_get_nav_menu_items('main-navigation');
-    foreach ($menu as $item){
-        array_push($menu_items, ['title' => $item->title, 'url' => $item->url]);
-    }
-    return view('partials.forms.request')->withMenu($menu_items);
+    return view('partials.forms.request');
 });
+
+Route::get('/sign-up', function(){
+    return view('partials.forms.sign_up');
+});
+
+Route::post('/submit-driver-form', 'ApplicationSubmitController@driverSubmit');
