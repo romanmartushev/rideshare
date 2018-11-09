@@ -27,4 +27,23 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    public function isAdmin(){
+        $user = UserMeta::where('user_id', $this->id)->first();
+        return $user->role === 'admin';
+    }
+
+    public function isDriver(){
+        $user = UserMeta::where('user_id', $this->id)->first();
+        return $user->role === 'driver';
+    }
+
+    public function isCustomer(){
+        $user = UserMeta::where('user_id', $this->id)->first();
+        return $user->role === 'customer';
+    }
+
+    public function getUserMeta(){
+        return UserMeta::where('user_id', $this->id)->first();
+    }
 }
