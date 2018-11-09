@@ -14,7 +14,7 @@
                                 <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">Profile</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="false">Make Request</a>
+                                <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-request" role="tab" aria-controls="pills-contact" aria-selected="false">Make Request</a>
                             </li>
                         </ul>
                     </div>
@@ -48,7 +48,9 @@
                                             </tbody>
                                         </table>
                                     </div>
-                                    <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">...</div>
+                                    <div class="tab-pane fade" id="pills-request" role="tabpanel" aria-labelledby="pills-contact-tab">
+                                        @include('partials.forms.request_form')
+                                    </div>
                                 </div>
                             </div>
                         </div>

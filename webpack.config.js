@@ -31,6 +31,7 @@ const Dotenv = require('dotenv-webpack');
 module.exports = {
     entry: {
         main: ['./resources/js/main.js', './resources/sass/app.scss'],
+        app: ['./resources/js/app.js'],
         request: ['./resources/js/request.js', './resources/sass/app.scss'],
         apply: ['./resources/js/apply.js', './resources/sass/app.scss'],
     },
