@@ -74,10 +74,10 @@ class RegisterController extends Controller
         UserMeta::create([
             'user_id' => $user->id,
             'name' => $data['name'],
+            'email' => $data['email'],
             'phone_number' => $data['phone_number'],
             'address' => $data['address'],
         ]);
-
         return $user;
     }
 }

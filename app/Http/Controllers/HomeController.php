@@ -26,7 +26,7 @@ class HomeController extends Controller
     {
         $user = Auth::user();
         if($user->isAdmin()){
-            return view('admin.home');
+            return view('admin.home')->with(['customers' => $user->getAllCustomers(), 'drivers' => $user->getAllDrivers()]);
         }elseif($user->isDriver()){
             return view('driver.home')->with(['user_info' => $user->getUserMeta()]);
         }elseif($user->isCustomer()){

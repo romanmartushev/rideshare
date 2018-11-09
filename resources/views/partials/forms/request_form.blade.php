@@ -7,20 +7,16 @@ Inputs needed:
     <div class="row">
         <div class="col-sm-6 p-0">
             <div class="form-group col-sm-12 col-sm-4">
-                <label for="last_name">Last Name:</label>
-                <input class="form-control" type="text" id="last_name" placeholder="Last Name" name="last_name">
-            </div>
-            <div class="form-group col-sm-12 col-sm-4">
-                <label for="first_name">First Name:</label>
-                <input class="form-control" type="text" id="first_name" placeholder="First Name" name="first_name">
+                <label for="full_name">Full Name:</label>
+                <input class="form-control" type="text" id="full_name" placeholder="Full Name" name="full_name" value="{{ $user_info->name }}">
             </div>
             <div class="form-group col-sm-12 col-sm-4">
                 <label for="phone">Phone Number:</label>
-                <input class="form-control" type="tel" id="phone_number" placeholder="1-(555)-555-5555" name="phone">
+                <input class="form-control" type="tel" id="phone_number" placeholder="1-(555)-555-5555" name="phone" value="{{ $user_info->phone_number }}">
             </div>
             <div class="form-group col-sm-12 col-sm-4">
                 <label for="current">Current Address</label>
-                <input type="text" class="form-control" id="current_address" aria-describedby="current_address_help" name="current" placeholder="Current Address">
+                <input type="text" class="form-control" id="current_address" aria-describedby="current_address_help" name="current" placeholder="Current Address" value="{{ $user_info->address }}">
                 <small id="current_address_help" class="form-text text-muted">Address where you should be picked up at</small>
             </div>
             <div class="form-group col-sm-12 col-sm-4">

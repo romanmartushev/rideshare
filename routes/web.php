@@ -15,20 +15,17 @@ Route::get('/', function () {
     return redirect("/wordpress");
 });
 
-Route::get('/welcome', function(){
-   return view('welcome');
-});
-
-Route::get('/make-request', function(){
-    return view('partials.forms.request');
-});
-
+/**
+ * Routes for the driver application
+ */
 Route::get('/apply', function(){
     return view('partials.forms.apply');
 });
-
 Route::post('/submit-driver-form', 'ApplicationSubmitController@driverSubmit');
+Route::post('/create/driver','ApplicationSubmitController@register');
 
+/**
+ * Routes for RideShare
+ */
 Auth::routes();
-
 Route::get('/home', 'HomeController@index')->name('home');

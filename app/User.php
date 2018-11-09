@@ -46,4 +46,16 @@ class User extends Authenticatable
     public function getUserMeta(){
         return UserMeta::where('user_id', $this->id)->first();
     }
+    public function getAllDrivers(){
+        if($this->isAdmin()){
+            return UserMeta::where('role', 'driver')->get();
+        }
+        return [];
+    }
+    public function getAllCustomers(){
+        if($this->isAdmin()){
+            return UserMeta::where('role', 'customer')->get();
+        }
+        return [];
+    }
 }
