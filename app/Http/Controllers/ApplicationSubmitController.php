@@ -34,7 +34,7 @@ class ApplicationSubmitController extends Controller
                 $files = $request->allFiles();
                 $message->from(env("MAIL_FROM","donotreply@rideshare.net"));
                 $message->to(env("JOB_APPLICATION_MAIL_TO","admin@rideshare.net"));
-                $message->subject("Volunteer Application");
+                $message->subject("Volunteer Driver Application");
                 foreach($files as $file){
                     $message->attach($file->getPathName(),['as' => $file->getClientOriginalName()]);
                 }
