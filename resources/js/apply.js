@@ -7,9 +7,6 @@ var app = new Vue({
         message: "",
         success:false,
         error:false,
-        driver: false,
-        customer: false,
-        chosen: false,
         last_name: "",
         middle_initial: "",
         first_name: "",
@@ -48,14 +45,6 @@ var app = new Vue({
         reference_id: 0,
     },
     methods:{
-        chooseSignUp(type){
-            if(type === 'driver'){
-                this.driver = true;
-            }else if(type === 'customer'){
-                this.customer = true;
-            }
-            this.chosen = true;
-        },
         SubmitDriverInfo(){
             var vm = this;
             var url = "?last_name="+this.last_name+"&middle_initial="+this.middle_initial;

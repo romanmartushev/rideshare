@@ -23,8 +23,12 @@ Route::get('/make-request', function(){
     return view('partials.forms.request');
 });
 
-Route::get('/sign-up', function(){
-    return view('partials.forms.sign_up');
+Route::get('/apply', function(){
+    return view('partials.forms.apply');
 });
 
 Route::post('/submit-driver-form', 'ApplicationSubmitController@driverSubmit');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
