@@ -1,5 +1,5 @@
 <?php
-
+use Illuminate\Support\Facades\Auth;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -23,7 +23,12 @@ Route::get('/apply', function(){
 });
 Route::post('/submit-driver-form', 'ApplicationSubmitController@driverSubmit');
 Route::post('/create/driver','ApplicationSubmitController@register');
-
+Route::get('/fetch/drivers',function (){
+    if($user = Auth::user()){
+        return $user->getAllDrivers();
+    }
+    return [];
+});
 /**
  * Routes for RideShare
  */

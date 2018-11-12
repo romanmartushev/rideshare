@@ -13134,7 +13134,7 @@ var app = new __WEBPACK_IMPORTED_MODULE_0_vue__["a" /* default */]({
             password: '',
             password_confirmation: ''
         },
-        success: [],
+        success: {},
         errors: [],
     },
     methods:{
@@ -13149,11 +13149,28 @@ var app = new __WEBPACK_IMPORTED_MODULE_0_vue__["a" /* default */]({
                 address: vm.driver.address,
             }).then(response => {
                 vm.success = response.data;
+                vm.fetchDrivers();
             }).catch(error => {
                 vm.errors = error.response.data.errors;
             });
+            setTimeout(() => {
+                vm.success = {};
+                vm.errors = [];
+            },5000);
+        },
+        fetchDrivers() {
+            var vm = this;
+            __WEBPACK_IMPORTED_MODULE_1_axios___default.a.get('/fetch/drivers')
+                .then(response => {
+                    vm.drivers = response.data;
+                }).catch(error => {
+                    vm.errors = error.response.data.errors;
+                });
+            setTimeout(() => {
+                vm.success = {};
+                vm.errors = [];
+            },5000);
         }
-
     },
     mounted() {
         this.customers = initial_customers;

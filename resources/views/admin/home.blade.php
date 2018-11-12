@@ -145,8 +145,9 @@
                                                 </div>
                                             </div>
                                             {{--TODO: Error and success detection--}}
-                                            <ul>
-                                                <li v-for="error in errors" class="alert alert-danger">@{{ error[0] }}</li>
+                                            <ul class="list-group">
+                                                <li v-if="success.hasOwnProperty('name')" class="list-group-item list-group-item-success">The driver @{{ success.name }} was successfully created</li>
+                                                <li v-for="error in errors" class="list-group-item list-group-item-danger">@{{ error[0] }}</li>
                                             </ul>
                                         </form>
                                     </div>

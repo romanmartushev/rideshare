@@ -14,7 +14,7 @@ var app = new Vue({
             password: '',
             password_confirmation: ''
         },
-        success: [],
+        success: {},
         errors: [],
     },
     methods:{
@@ -29,11 +29,28 @@ var app = new Vue({
                 address: vm.driver.address,
             }).then(response => {
                 vm.success = response.data;
+                vm.fetchDrivers();
             }).catch(error => {
                 vm.errors = error.response.data.errors;
             });
+            setTimeout(() => {
+                vm.success = {};
+                vm.errors = [];
+            },5000);
+        },
+        fetchDrivers() {
+            var vm = this;
+            axios.get('/fetch/drivers')
+                .then(response => {
+                    vm.drivers = response.data;
+                }).catch(error => {
+                    vm.errors = error.response.data.errors;
+                });
+            setTimeout(() => {
+                vm.success = {};
+                vm.errors = [];
+            },5000);
         }
-
     },
     mounted() {
         this.customers = initial_customers;
