@@ -29,6 +29,7 @@ Route::get('/fetch/drivers',function (){
     }
     return [];
 });
+Route::post('/customer/make-request', 'ApplicationSubmitController@customerSubmit');
 /**
  * Routes for RideShare
  */

@@ -2,8 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\PickUpRequestRequest;
+use App\PickUpRequest;
 use App\User;
 use App\UserMeta;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Hash;
@@ -98,5 +101,12 @@ class ApplicationSubmitController extends Controller
             'role' => 'driver'
         ]);
         return $user;
+    }
+
+    public function customerSubmit(PickUpRequestRequest $request){
+        $data = $request->toArray();
+        $data['driver_gender'] = json_encode($data['driver_gender']);
+        $data['time'] = date('h:i:s', strtotime($data['time']));
+        return PickUpRequest::create($data);
     }
 }
