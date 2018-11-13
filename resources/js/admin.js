@@ -50,7 +50,7 @@ var app = new Vue({
                 vm.success = {};
                 vm.errors = [];
             },5000);
-        }
+        },
     },
     mounted() {
         this.customers = initial_customers;

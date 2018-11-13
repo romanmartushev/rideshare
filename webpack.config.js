@@ -35,6 +35,7 @@ module.exports = {
         request: ['./resources/js/request.js', './resources/sass/app.scss'],
         apply: ['./resources/js/apply.js', './resources/sass/app.scss'],
         admin: ['./resources/js/admin.js', './resources/sass/app.scss'],
+        driver: ['./resources/js/driver.js', './resources/sass/app.scss'],
     },
     output: {
         filename: '[name].js',

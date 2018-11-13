@@ -11,6 +11,8 @@ var app = new Vue({
        date: null
    },
     methods:{
-
+        submitRequest(){
+            var vm = this;
+        }
     }
 });

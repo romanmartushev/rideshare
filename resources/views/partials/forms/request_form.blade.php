@@ -15,6 +15,18 @@ Inputs needed:
                 <input class="form-control" type="tel" id="phone_number" placeholder="1-(555)-555-5555" name="phone" value="{{ $user_info->phone_number }}">
             </div>
             <div class="form-group col-sm-12 col-sm-4">
+                <label for="gender">Gender</label>
+                <select class="form-control" id="gender">
+                    <option selected value="default">Select Gender</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                </select>
+            </div>
+            <div class="form-group col-sm-12 col-sm-4">
+                <label for="age">Age:</label>
+                <input min="0" class="form-control" type="number" id="age" placeholder="Age" name="age" value="{{ $user_info->age }}">
+            </div>
+            <div class="form-group col-sm-12 col-sm-4">
                 <label for="current">Current Address</label>
                 <input type="text" class="form-control" id="current_address" aria-describedby="current_address_help" name="current" placeholder="Current Address" value="{{ $user_info->address }}">
                 <small id="current_address_help" class="form-text text-muted">Address where you should be picked up at</small>
@@ -28,6 +40,10 @@ Inputs needed:
                 <label for="duration">Duration of Service</label>
                 <input type="text" class="form-control" id="duration_of_service" aria-describedby="duration_help" name="duration" placeholder="Duration of Service">
                 <small id="duration_help" class="form-text text-muted">How much time will you be spending at the destination(s)</small>
+            </div>
+            <div class="form-group col-sm-12 col-sm-4">
+                <label for="number_of_passengers">Number of Passengers</label>
+                <input min="1" type="number" class="form-control" id="number_of_passengers" name="number_of_passengers" value="1">
             </div>
         </div>
         <div class="col-sm-6pt-5">
@@ -57,11 +73,20 @@ Inputs needed:
                 <input class="form-check-input" name="items" type="radio" id="items_no" value="no">
                 <label class="form-check-label" for="items_no">No</label>
             </div>
-            <div class="form-group col-sm-12">
-                <label for="special_services_text">If yes, please explain so we could better accommodate your needs:</label>
-            </div>
-            <div class="form-group col-sm-12">
-                <textarea class="form-control" id="special_services_text" name="special_services_text" rows="3"></textarea>
+            <div class="form-group col-sm-12 mt-3">
+                <label for="prevent">Do you prefer a male of female driver? (select all that apply)</label>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                    <label class="form-check-label" for="defaultCheck1">
+                        Male
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                    <label class="form-check-label" for="defaultCheck1">
+                        Female
+                    </label>
+                </div>
             </div>
         </div>
         <div class="col-sm-6 col-sm-4">
