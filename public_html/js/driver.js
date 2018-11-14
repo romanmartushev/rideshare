@@ -13128,7 +13128,9 @@ var app = new __WEBPACK_IMPORTED_MODULE_0_vue__["a" /* default */]({
         errors: [],
         map: '',
         marker: '',
-        pos: {}
+        pos: {},
+        directionsService: '',
+        directionsDisplay: '',
     },
     methods: {
         fetchRequests() {
@@ -13158,9 +13160,32 @@ var app = new __WEBPACK_IMPORTED_MODULE_0_vue__["a" /* default */]({
                 //Get Location
                 vm.pos = {lat: vm.lat, lng: vm.long};
                 // The map, centered at pos
+                vm.directionsService = new google.maps.DirectionsService();
+                vm.directionsDisplay = new google.maps.DirectionsRenderer();
                 vm.map = new google.maps.Map(document.getElementById('map'), {zoom: 20, center: vm.pos});
+                vm.directionsDisplay.setMap(vm.map);
+                vm.directionsDisplay.setPanel(document.getElementById('directionsPanel'));
                 // The marker, positioned at pos
                 vm.marker = new google.maps.Marker({position: vm.pos, map: vm.map});
+            });
+        },
+        getDirections(destination_address){
+            $('#pills-tab a[href="#pills-home"]').tab('show');
+            var vm = this;
+            this.marker.setMap(null);
+            var request = {
+                origin: new google.maps.LatLng(vm.lat, vm.long),
+                destination: destination_address,
+                travelMode: 'DRIVING'
+            };
+            this.directionsService.route(request, function(result, status) {
+                if (status == 'OK') {
+                    vm.directionsDisplay.setDirections(result);
+                    setTimeout(() => {
+                        vm.directionsDisplay.map.setZoom(15);
+                        vm.directionsDisplay.map.setCenter(vm.pos);
+                    },100);
+                }
             });
         },
         updateMap(){
@@ -13172,18 +13197,8 @@ var app = new __WEBPACK_IMPORTED_MODULE_0_vue__["a" /* default */]({
                     vm.pos = {lat: vm.lat, lng: vm.long};
                 });
                 this.map.setCenter(this.pos);
-                console.log('Lat:'+this.lat,'Long:'+this.long);
             }
         },
-        getDirections(){
-            __WEBPACK_IMPORTED_MODULE_1_axios___default.a.get(`${'https://cors-anywhere.herokuapp.com/'}https://maps.googleapis.com/maps/api/directions/json?origin=Disneyland&destination=Universal+Studios+Hollywood&key=${"AIzaSyBKMXgNVtiSI2CEeHdQpxRjIhrWbqJeOzc"}`)
-                .then(response => {
-                    console.log(response.data);
-                })
-                .catch(error => {
-                    console.log(error);
-                });
-        }
     },
     mounted() {
         var vm = this;

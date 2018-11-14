@@ -28,8 +28,8 @@
                                 <div class="col-sm-12">
                                     <div class="tab-content" id="pills-tabContent">
                                         <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
-                                            Welcome {{$user_info->name}}!
-                                            <div style="height: 60vh" id="map"></div>
+                                            <div id="map" style="width:100%; height:40vh"></div>
+                                            <div id="directionsPanel" style="width:100%;height:30vh;overflow-y:scroll"></div>
                                         </div>
                                         <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
                                             <table class="table">
@@ -54,8 +54,8 @@
                                                 <ul v-for="(request, index) in requests">
                                                     <h1>Request @{{ index+1 }}</h1>
                                                     <li>Status: @{{ request.status }}</li>
-                                                    <li>Pick Up Address @{{ request.pick_up_address }}</li>
-                                                    <li>Destination Address: @{{ request.destination_address }}</li>
+                                                    <li>Pick Up Address <button type="button" class="btn btn-link" @click="getDirections(request.pick_up_address)">@{{ request.pick_up_address }}</button></li>
+                                                    <li>Destination Address: <button type="button" class="btn btn-link" @click="getDirections(request.destination_address)">@{{ request.destination_address }}</button></li>
                                                     <li>Bringing Items: @{{ request.bringing_items }}</li>
                                                     <li>Time: @{{ request.time }}</li>
                                                     <li>Date: @{{ request.date }}</li>
@@ -75,5 +75,8 @@
             </div>
         </div>
     </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script src="/js/driver.js"></script>
 @endsection
