@@ -75,6 +75,5 @@
             </div>
         </div>
     </div>
-    {{--<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBKMXgNVtiSI2CEeHdQpxRjIhrWbqJeOzc"></script>--}}
     <script src="/js/driver.js"></script>
 @endsection
