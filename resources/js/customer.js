@@ -1,34 +1,55 @@
 import Vue from 'vue'
 import * as uiv from 'uiv'
 import axios from 'axios'
-
 Vue.use(uiv);
 
-var app = new Vue({
-   el:"#customer-request",
+var main = new Vue({
+   el: '#pills-view-requests',
    data:{
-       time: new Date(),
-       date: new Date().getUTCFullYear() + '-' + (new Date().getMonth()+1) + '-' + new Date().getDate(),
-       name: '',
-       phone_number: '',
-       gender: 'default',
-       age: 0,
-       pick_up_address: '',
-       destination_address: '',
-       duration_of_service: '',
-       number_of_passengers: 1,
-       bringing_items: '',
-       special_services: '',
-       special_services_information: '',
-       driver_gender:{
-           male: true,
-           female: true,
-       },
-       additional_information: '',
-       user: {},
-       errors: [],
-       success: '',
+       requests: []
    },
+   methods: {
+       fetchRequests(){
+           var vm = this;
+           axios.get('/customer/fetch-request')
+               .then(response => {
+                   vm.requests = response.data;
+               })
+               .catch(error => {
+                   console.log(error);
+               });
+       },
+   },
+    mounted(){
+        this.fetchRequests();
+    }
+});
+
+var app = new Vue({
+    el:"#customer-request",
+    data:{
+        time: new Date(),
+        date: new Date().getUTCFullYear() + '-' + (new Date().getMonth()+1) + '-' + new Date().getDate(),
+        name: '',
+        phone_number: '',
+        gender: 'default',
+        age: 0,
+        pick_up_address: '',
+        destination_address: '',
+        duration_of_service: '',
+        number_of_passengers: 1,
+        bringing_items: '',
+        special_services: '',
+        special_services_information: '',
+        driver_gender:{
+            male: true,
+            female: true,
+        },
+        additional_information: '',
+        user: {},
+        errors: [],
+        success: '',
+    },
     methods:{
         submitRequest(){
             var vm = this;
@@ -69,7 +90,7 @@ var app = new Vue({
         }
     },
     mounted(){
-       this.setAttributes(initial_user);
-       this.user = initial_user;
+        this.setAttributes(initial_user);
+        this.user = initial_user;
     }
 });

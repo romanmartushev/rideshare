@@ -30,12 +30,12 @@ new WebpackConfig().build();
 const Dotenv = require('dotenv-webpack');
 module.exports = {
     entry: {
-        main: ['./resources/js/main.js', './resources/sass/app.scss'],
+        main: ['./resources/js/main.js'],
         app: ['./resources/js/app.js'],
-        request: ['./resources/js/request.js', './resources/sass/app.scss'],
-        apply: ['./resources/js/apply.js', './resources/sass/app.scss'],
-        admin: ['./resources/js/admin.js', './resources/sass/app.scss'],
-        driver: ['./resources/js/driver.js', './resources/sass/app.scss'],
+        customer: ['./resources/js/customer.js'],
+        apply: ['./resources/js/apply.js'],
+        admin: ['./resources/js/admin.js'],
+        driver: ['./resources/js/driver.js'],
     },
     output: {
         filename: '[name].js',

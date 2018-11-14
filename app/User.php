@@ -58,4 +58,7 @@ class User extends Authenticatable
         }
         return [];
     }
+    public function getRequests(){
+        return PickUpRequest::where('user_id', $this->id)->get();
+    }
 }

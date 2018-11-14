@@ -6,7 +6,6 @@ use App\Http\Requests\PickUpRequestRequest;
 use App\PickUpRequest;
 use App\User;
 use App\UserMeta;
-use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Hash;

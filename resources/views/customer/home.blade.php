@@ -4,7 +4,7 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-12">
-                <div class="card">
+                <div class="card" id="customer-main">
                     <div class="card-header pb-0">
                         <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
                             <li class="nav-item">
@@ -14,7 +14,10 @@
                                 <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">Profile</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-request" role="tab" aria-controls="pills-contact" aria-selected="false">Make Request</a>
+                                <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-view-requests" role="tab" aria-controls="pills-view-requests" aria-selected="false">View Requests</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-request" role="tab" aria-controls="pills-request" aria-selected="false">Make Request</a>
                             </li>
                         </ul>
                     </div>
@@ -48,7 +51,25 @@
                                             </tbody>
                                         </table>
                                     </div>
-                                    <div class="tab-pane fade" id="pills-request" role="tabpanel" aria-labelledby="pills-contact-tab">
+                                    <div class="tab-pane fade" id="pills-view-requests" role="tabpanel" aria-labelledby="pills-view-requests-tab">
+                                        <table class="table">
+                                            <ul v-for="(request, index) in requests">
+                                                <h1>Request @{{ index+1 }}</h1>
+                                                <li>Status: @{{ request.status }}</li>
+                                                <li>Pick Up Address @{{ request.pick_up_address }}</li>
+                                                <li>Destination Address: @{{ request.destination_address }}</li>
+                                                <li>Bringing Items: @{{ request.bringing_items }}</li>
+                                                <li>Time: @{{ request.time }}</li>
+                                                <li>Date: @{{ request.date }}</li>
+                                                <li>Number of Passengers: @{{ request.number_of_passengers }}</li>
+                                                <li>Duration of Service: @{{ request.duration_of_service }}</li>
+                                                <li>Special Services: @{{ request.special_services }}</li>
+                                                <li>Special Services Info.: @{{ request.special_services_information }}</li>
+                                                <li>Additional Info.: @{{ request.additional_information }}</li>
+                                            </ul>
+                                        </table>
+                                    </div>
+                                    <div class="tab-pane fade" id="pills-request" role="tabpanel" aria-labelledby="pills-request-tab">
                                         @include('partials.forms.request_form')
                                     </div>
                                 </div>
@@ -59,4 +80,8 @@
             </div>
         </div>
     </div>
+    <script>
+        var initial_user = {!! $user_info !!};
+    </script>
+    <script src="/js/customer.js"></script>
 @endsection

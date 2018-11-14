@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 42);
+/******/ 	return __webpack_require__(__webpack_require__.s = 41);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -13081,12 +13081,7 @@ module.exports = function spread(callback) {
 
 
 /***/ }),
-/* 31 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "./public_html/css/app.css";
-
-/***/ }),
+/* 31 */,
 /* 32 */,
 /* 33 */,
 /* 34 */,
@@ -13096,55 +13091,74 @@ module.exports = __webpack_require__.p + "./public_html/css/app.css";
 /* 38 */,
 /* 39 */,
 /* 40 */,
-/* 41 */,
-/* 42 */
+/* 41 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(43);
-module.exports = __webpack_require__(31);
+module.exports = __webpack_require__(42);
 
 
 /***/ }),
-/* 43 */
+/* 42 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue__ = __webpack_require__(9);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_uiv__ = __webpack_require__(44);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_uiv__ = __webpack_require__(43);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_axios__ = __webpack_require__(12);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_axios___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_axios__);
 
 
 
-
 __WEBPACK_IMPORTED_MODULE_0_vue__["a" /* default */].use(__WEBPACK_IMPORTED_MODULE_1_uiv__);
 
-var app = new __WEBPACK_IMPORTED_MODULE_0_vue__["a" /* default */]({
-   el:"#customer-request",
+var main = new __WEBPACK_IMPORTED_MODULE_0_vue__["a" /* default */]({
+   el: '#pills-view-requests',
    data:{
-       time: new Date(),
-       date: new Date().getUTCFullYear() + '-' + (new Date().getMonth()+1) + '-' + new Date().getDate(),
-       name: '',
-       phone_number: '',
-       gender: 'default',
-       age: 0,
-       pick_up_address: '',
-       destination_address: '',
-       duration_of_service: '',
-       number_of_passengers: 1,
-       bringing_items: '',
-       special_services: '',
-       special_services_information: '',
-       driver_gender:{
-           male: true,
-           female: true,
-       },
-       additional_information: '',
-       user: {},
-       errors: [],
-       success: '',
+       requests: []
    },
+   methods: {
+       fetchRequests(){
+           var vm = this;
+           __WEBPACK_IMPORTED_MODULE_2_axios___default.a.get('/customer/fetch-request')
+               .then(response => {
+                   vm.requests = response.data;
+               })
+               .catch(error => {
+                   console.log(error);
+               });
+       },
+   },
+    mounted(){
+        this.fetchRequests();
+    }
+});
+
+var app = new __WEBPACK_IMPORTED_MODULE_0_vue__["a" /* default */]({
+    el:"#customer-request",
+    data:{
+        time: new Date(),
+        date: new Date().getUTCFullYear() + '-' + (new Date().getMonth()+1) + '-' + new Date().getDate(),
+        name: '',
+        phone_number: '',
+        gender: 'default',
+        age: 0,
+        pick_up_address: '',
+        destination_address: '',
+        duration_of_service: '',
+        number_of_passengers: 1,
+        bringing_items: '',
+        special_services: '',
+        special_services_information: '',
+        driver_gender:{
+            male: true,
+            female: true,
+        },
+        additional_information: '',
+        user: {},
+        errors: [],
+        success: '',
+    },
     methods:{
         submitRequest(){
             var vm = this;
@@ -13167,10 +13181,8 @@ var app = new __WEBPACK_IMPORTED_MODULE_0_vue__["a" /* default */]({
                 user_id: vm.user.user_id,
             }).then(response => {
                 vm.success = response.data;
-                console.log(vm.success);
             }).catch(error => {
                 vm.errors = error.response.data.errors;
-                console.log(error.response.data);
             });
             setTimeout(() => {
                 vm.success = '';
@@ -13187,14 +13199,14 @@ var app = new __WEBPACK_IMPORTED_MODULE_0_vue__["a" /* default */]({
         }
     },
     mounted(){
-       this.setAttributes(initial_user);
-       this.user = initial_user;
+        this.setAttributes(initial_user);
+        this.user = initial_user;
     }
 });
 
 
 /***/ }),
-/* 44 */
+/* 43 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";

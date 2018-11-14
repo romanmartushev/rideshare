@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 49);
+/******/ 	return __webpack_require__(__webpack_require__.s = 48);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -549,23 +549,15 @@ module.exports = g;
 
 /***/ }),
 
-/***/ 31:
+/***/ 48:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "./public_html/css/app.css";
+module.exports = __webpack_require__(49);
+
 
 /***/ }),
 
 /***/ 49:
-/***/ (function(module, exports, __webpack_require__) {
-
-__webpack_require__(50);
-module.exports = __webpack_require__(31);
-
-
-/***/ }),
-
-/***/ 50:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";

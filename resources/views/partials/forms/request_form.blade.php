@@ -127,7 +127,3 @@ Inputs needed:
         </ul>
     </div>
 </div>
-<script>
-    var initial_user = {!! $user_info !!};
-</script>
-<script src="/js/request.js"></script>
