@@ -59,6 +59,11 @@ class User extends Authenticatable
         return [];
     }
     public function getRequests(){
-        return PickUpRequest::where('user_id', $this->id)->get();
+        if($this->isCustomer()) {
+            return PickUpRequest::where('user_id', $this->id)->get();
+        }elseif ($this->isDriver()){
+            return PickUpRequest::where('status', 'unfulfilled')->get();
+        }
+        return [];
     }
 }

@@ -72,6 +72,7 @@ var app = new Vue({
                 user_id: vm.user.user_id,
             }).then(response => {
                 vm.success = response.data;
+                main.fetchRequests();
             }).catch(error => {
                 vm.errors = error.response.data.errors;
             });

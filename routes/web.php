@@ -16,7 +16,7 @@ Route::get('/', function () {
 });
 
 /**
- * Routes for the driver application
+ * Routes for the admin/generic
  */
 Route::get('/apply', function(){
     return view('partials.forms.apply');
@@ -34,6 +34,15 @@ Route::get('/fetch/drivers',function (){
  */
 Route::post('/customer/make-request', 'ApplicationSubmitController@customerSubmit');
 Route::get('/customer/fetch-request', function () {
+    if($user = Auth::user()){
+        return $user->getRequests();
+    }
+    return [];
+});
+/**
+ * Routes for driver
+ */
+Route::get('/driver/fetch-request', function () {
     if($user = Auth::user()){
         return $user->getRequests();
     }
