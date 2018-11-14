@@ -13120,7 +13120,7 @@ var main = new __WEBPACK_IMPORTED_MODULE_0_vue__["a" /* default */]({
    methods: {
        fetchRequests(){
            var vm = this;
-           __WEBPACK_IMPORTED_MODULE_2_axios___default.a.get('/customer/fetch-request')
+           __WEBPACK_IMPORTED_MODULE_2_axios___default.a.get('/fetch-request')
                .then(response => {
                    vm.requests = response.data;
                })

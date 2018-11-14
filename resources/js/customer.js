@@ -11,7 +11,7 @@ var main = new Vue({
    methods: {
        fetchRequests(){
            var vm = this;
-           axios.get('/customer/fetch-request')
+           axios.get('/fetch-request')
                .then(response => {
                    vm.requests = response.data;
                })

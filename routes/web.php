@@ -30,19 +30,10 @@ Route::get('/fetch/drivers',function (){
     return [];
 });
 /**
- * Routes for customers
+ * Routes for customers/drivers routes
  */
 Route::post('/customer/make-request', 'ApplicationSubmitController@customerSubmit');
-Route::get('/customer/fetch-request', function () {
-    if($user = Auth::user()){
-        return $user->getRequests();
-    }
-    return [];
-});
-/**
- * Routes for driver
- */
-Route::get('/driver/fetch-request', function () {
+Route::get('/fetch-request', function () {
     if($user = Auth::user()){
         return $user->getRequests();
     }

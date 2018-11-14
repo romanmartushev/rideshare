@@ -29,8 +29,7 @@
                                     <div class="tab-content" id="pills-tabContent">
                                         <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
                                             Welcome {{$user_info->name}}!
-                                            Latitude: @{{ lat }}
-                                            Longitude: @{{ long }}
+                                            <div style="height: 60vh" id="map"></div>
                                         </div>
                                         <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
                                             <table class="table">
@@ -76,5 +75,6 @@
             </div>
         </div>
     </div>
+    {{--<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBKMXgNVtiSI2CEeHdQpxRjIhrWbqJeOzc"></script>--}}
     <script src="/js/driver.js"></script>
 @endsection
