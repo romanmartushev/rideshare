@@ -13162,7 +13162,6 @@ var app = new __WEBPACK_IMPORTED_MODULE_0_vue__["a" /* default */]({
                 // The marker, positioned at pos
                 vm.marker = new google.maps.Marker({position: vm.pos, map: vm.map});
             });
-            console.log('Lat:'+this.lat,'Long:'+this.long);
         },
         updateMap(){
             if (navigator.geolocation) {
@@ -13175,6 +13174,15 @@ var app = new __WEBPACK_IMPORTED_MODULE_0_vue__["a" /* default */]({
                 this.map.setCenter(this.pos);
                 console.log('Lat:'+this.lat,'Long:'+this.long);
             }
+        },
+        getDirections(){
+            __WEBPACK_IMPORTED_MODULE_1_axios___default.a.get(`${'https://cors-anywhere.herokuapp.com/'}https://maps.googleapis.com/maps/api/directions/json?origin=Disneyland&destination=Universal+Studios+Hollywood&key=${"AIzaSyBKMXgNVtiSI2CEeHdQpxRjIhrWbqJeOzc"}`)
+                .then(response => {
+                    console.log(response.data);
+                })
+                .catch(error => {
+                    console.log(error);
+                });
         }
     },
     mounted() {

@@ -45,7 +45,6 @@ var app = new Vue({
                 // The marker, positioned at pos
                 vm.marker = new google.maps.Marker({position: vm.pos, map: vm.map});
             });
-            console.log('Lat:'+this.lat,'Long:'+this.long);
         },
         updateMap(){
             if (navigator.geolocation) {
@@ -58,6 +57,15 @@ var app = new Vue({
                 this.map.setCenter(this.pos);
                 console.log('Lat:'+this.lat,'Long:'+this.long);
             }
+        },
+        getDirections(){
+            axios.get(`${'https://cors-anywhere.herokuapp.com/'}https://maps.googleapis.com/maps/api/directions/json?origin=Disneyland&destination=Universal+Studios+Hollywood&key=${process.env.GOOGLE_MAPS_API_KEY}`)
+                .then(response => {
+                    console.log(response.data);
+                })
+                .catch(error => {
+                    console.log(error);
+                });
         }
     },
     mounted() {
