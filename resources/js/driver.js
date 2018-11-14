@@ -8,17 +8,12 @@ var app = new Vue({
         lat: 0,
         long: 0,
         requests: [],
-        errors: []
+        errors: [],
+        map: '',
+        marker: '',
+        pos: {}
     },
     methods: {
-        getLocation() {
-            if (navigator.geolocation) {
-                this.initMap();
-            }
-            else {
-                console.log('unable to fetch location')
-            }
-        },
         fetchRequests() {
             var vm = this;
             axios.get('/fetch-request')
@@ -29,21 +24,40 @@ var app = new Vue({
                     vm.errors = error.response.data;
                 });
         },
+        getLocation() {
+            if (navigator.geolocation) {
+                this.initMap();
+            }
+            else {
+                console.log('unable to fetch location')
+            }
+        },
         initMap() {
-            var map;
             var vm = this;
             navigator.geolocation.getCurrentPosition(function (position) {
                 // Get the coordinates of the current position.
                 vm.lat = position.coords.latitude;
                 vm.long = position.coords.longitude;
-                // The location of Uluru
-                var uluru = {lat: vm.lat, lng: vm.long};
-                // The map, centered at Uluru
-                var map = new google.maps.Map(
-                    document.getElementById('map'), {zoom: 8, center: uluru});
-                // The marker, positioned at Uluru
-                var marker = new google.maps.Marker({position: uluru, map: map});
+                //Get Location
+                vm.pos = {lat: vm.lat, lng: vm.long};
+                // The map, centered at pos
+                vm.map = new google.maps.Map(document.getElementById('map'), {zoom: 20, center: vm.pos});
+                // The marker, positioned at pos
+                vm.marker = new google.maps.Marker({position: vm.pos, map: vm.map});
             });
+            console.log('Lat:'+this.lat,'Long:'+this.long);
+        },
+        updateMap(){
+            if (navigator.geolocation) {
+                var vm = this;
+                navigator.geolocation.getCurrentPosition(function (position) {
+                    vm.lat = position.coords.latitude;
+                    vm.long = position.coords.longitude;
+                    vm.pos = {lat: vm.lat, lng: vm.long};
+                });
+                this.map.setCenter(this.pos);
+                console.log('Lat:'+this.lat,'Long:'+this.long);
+            }
         }
     },
     mounted() {
