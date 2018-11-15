@@ -25,34 +25,40 @@
                             </div>
                         @endif
                         <div class="row">
-                                <div class="col-sm-12">
-                                    <div class="tab-content" id="pills-tabContent">
-                                        <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
-                                            <div id="map" style="width:100%; height:40vh"></div>
-                                            <div id="directionsPanel" style="width:100%;height:30vh;overflow-y:scroll"></div>
+                            <div class="col-sm-12">
+                                <div class="tab-content" id="pills-tabContent">
+                                    <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+                                        <div class="row justify-content-center">
+                                            <div class="col-sm-1">
+                                                <loading :active="mapLoading"></loading>
+                                            </div>
                                         </div>
-                                        <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
-                                            <table class="table">
-                                                <tbody>
-                                                <tr>
-                                                    <th scope="row">Full Name</th>
-                                                    <td>{{$user_info->name}}</td>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row">Phone Number</th>
-                                                    <td>{{$user_info->phone_number}}</td>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row">Address</th>
-                                                    <td>{{$user_info->address}}</td>
-                                                </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                        <div class="tab-pane fade" id="pills-view-requests" role="tabpanel" aria-labelledby="pills-view-requests-tab">
-                                            <table class="table">
-                                                <ul v-for="(request, index) in requests">
-                                                    <h1>Request @{{ index+1 }}</h1>
+                                        <div id="map" :style="mapHeight"></div>
+                                        <div id="directionsPanel" :style="directionsHeight" style="overflow-y: scroll"></div>
+                                    </div>
+                                    <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+                                        <table class="table">
+                                            <tbody>
+                                            <tr>
+                                                <th scope="row">Full Name</th>
+                                                <td>{{$user_info->name}}</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Phone Number</th>
+                                                <td>{{$user_info->phone_number}}</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Address</th>
+                                                <td>{{$user_info->address}}</td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="tab-pane fade" id="pills-view-requests" role="tabpanel" aria-labelledby="pills-view-requests-tab">
+                                        <div v-for="(request, index) in requests">
+                                            <button class="btn btn-link" data-toggle="collapse" :data-target="'#request'+index">Request @{{ index+1 }}</button>
+                                            <div :id="'request'+index" class="collapse">
+                                                <ul>
                                                     <li>Status: @{{ request.status }}</li>
                                                     <li>Pick Up Address <button type="button" class="btn btn-link" @click="getDirections(request.pick_up_address)">@{{ request.pick_up_address }}</button></li>
                                                     <li>Destination Address: <button type="button" class="btn btn-link" @click="getDirections(request.destination_address)">@{{ request.destination_address }}</button></li>
@@ -65,18 +71,16 @@
                                                     <li>Special Services Info.: @{{ request.special_services_information }}</li>
                                                     <li>Additional Info.: @{{ request.additional_information }}</li>
                                                 </ul>
-                                            </table>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script src="/js/driver.js"></script>
 @endsection

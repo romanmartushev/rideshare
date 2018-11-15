@@ -1,6 +1,9 @@
 import Vue from 'vue'
-import * as uiv from 'uiv'
 import axios from 'axios'
+import 'jquery';
+import 'bootstrap';
+import * as uiv from 'uiv'
+
 Vue.use(uiv);
 
 var main = new Vue({

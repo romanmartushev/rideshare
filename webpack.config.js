@@ -30,7 +30,6 @@ new WebpackConfig().build();
 const Dotenv = require('dotenv-webpack');
 module.exports = {
     entry: {
-        main: ['./resources/js/main.js'],
         app: ['./resources/js/app.js'],
         customer: ['./resources/js/customer.js'],
         apply: ['./resources/js/apply.js'],
@@ -59,7 +58,8 @@ module.exports = {
                     {
                         loader: 'file-loader',
                         options: {
-                            name: './public_html/css/[name].css',
+                            filename: '[name].css',
+                            path: __dirname+'/public_html/css'
                         }
                     },
                     {

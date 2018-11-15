@@ -1,6 +1,11 @@
 import Vue from 'vue';
 import axios from 'axios';
 import $Scriptjs from 'scriptjs';
+import $ from 'jquery';
+import 'bootstrap';
+import VueLoading from 'vue-loading-overlay';
+
+Vue.use(VueLoading);
 
 var app = new Vue({
     el: '#driver_root',
@@ -14,6 +19,17 @@ var app = new Vue({
         pos: {},
         directionsService: '',
         directionsDisplay: '',
+        mapHeight: {
+            height: '70vh',
+        },
+        directionsHeight : {
+            height: '0',
+            width: '100%',
+        },
+        mapLoading: true,
+    },
+    components: {
+        Loading: VueLoading
     },
     methods: {
         fetchRequests() {
@@ -45,14 +61,16 @@ var app = new Vue({
                 // The map, centered at pos
                 vm.directionsService = new google.maps.DirectionsService();
                 vm.directionsDisplay = new google.maps.DirectionsRenderer();
+                vm.mapLoading = false;
                 vm.map = new google.maps.Map(document.getElementById('map'), {zoom: 20, center: vm.pos});
                 vm.directionsDisplay.setMap(vm.map);
                 vm.directionsDisplay.setPanel(document.getElementById('directionsPanel'));
-                // The marker, positioned at pos
                 vm.marker = new google.maps.Marker({position: vm.pos, map: vm.map});
             });
         },
         getDirections(destination_address){
+            this.mapHeight.height = '40vh';
+            this.directionsHeight.height = '30vh';
             $('#pills-tab a[href="#pills-home"]').tab('show');
             var vm = this;
             this.marker.setMap(null);

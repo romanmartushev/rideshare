@@ -1,5 +1,7 @@
 import Vue from 'vue'
 import axios from 'axios'
+import 'jquery';
+import 'bootstrap';
 
 var app = new Vue({
     el:"#app",
