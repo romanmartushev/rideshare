@@ -33,7 +33,7 @@
                                     <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
                                         Welcome Admin!
                                     </div>
-                                    <div class="tab-pane fade" id="pills-customers" role="tabpanel" aria-labelledby="pills-profile-tab">
+                                    <div class="tab-pane fade" id="pills-customers" role="tabpanel" aria-labelledby="pills-profile-tab" style="overflow-x: scroll">
                                         <table class="table">
                                             <tbody>
                                             <tr>
@@ -53,7 +53,7 @@
                                             </tbody>
                                         </table>
                                     </div>
-                                    <div class="tab-pane fade" id="pills-drivers" role="tabpanel" aria-labelledby="pills-contact-tab">
+                                    <div class="tab-pane fade" id="pills-drivers" role="tabpanel" aria-labelledby="pills-contact-tab" style="overflow-x: scroll">
                                         <table class="table">
                                             <tbody>
                                             <tr>
